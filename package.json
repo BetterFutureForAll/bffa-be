@@ -1,0 +1,28 @@
+{
+  "name": "bffa-be",
+  "version": "1.0.0",
+  "description": "Backend server for the BFFA React App.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetterFutureForAll/bffa-be.git"
+  },
+  "keywords": [],
+  "author": "John Nelson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BetterFutureForAll/bffa-be/issues"
+  },
+  "homepage": "https://github.com/BetterFutureForAll/bffa-be#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "mongoose": "^5.10.5",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
