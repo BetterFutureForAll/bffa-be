@@ -1,3 +1,5 @@
+require('./lib/utils/connect')();
+
 const app = require('./lib/app');
 const PORT = 7891;
 
