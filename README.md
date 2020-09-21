@@ -9,6 +9,8 @@ The option of SQL vs NoSQL lead to a choice of MongoDB and Mongoose due to its s
 
 This approach will require more diligence in schema designs and modeling, but will be more flexible and faster to serve large documents quickly to the front end. 
 
+#### Cautions
+ The temptation to store everything into one giant document may make the calls faster on the server but will make calls take more time to transfer the call to the front end due to the nature of the internet. 
 
 ## Notes 
 Ideal data calls will follow 
@@ -21,8 +23,11 @@ Ideal data calls will follow
 We want to be able to pull a document with all the countries for a given year quickly. 
 We must be able to quickly fetch ALL countries scores.
 
-Each Year will reference many countries.
-Each Country will reference a spiScore for that year.
-Each Country will reference a category with a score.
-Each Score will have a calculated spiScore (based off 3 categories)
+Subcategories could be referenced, as those will not be called as often. The most commonly retrieved documents will probably be by years comparing multiple countries. 
+
+- Each Year will reference many countries.
+- Each Country will reference a spiScore for that year.
+- Each Country will reference a category with a score. Categories are [ Basic, Foundations, Opportunity ]
+- Each Category will have a calculated spiScore specific to the Country, Year, and Category
+- Each Category will have a subset of subcategories that each have a score.
 
