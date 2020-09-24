@@ -9,8 +9,11 @@ The option of SQL vs NoSQL lead to a choice of MongoDB and Mongoose due to its s
 
 This approach will require more diligence in schema designs and modeling, but will be more flexible and faster to serve large documents quickly to the front end. 
 
+Potentially may transpose each Row into a Country element with all the info for that year.country embedded into this object.
+This may not be a size problem as each row is relatively small data wise. 
+
 #### Cautions
- The temptation to store everything into one giant document may make the calls faster on the server but will make calls take more time to transfer the call to the front end due to the nature of the internet. 
+ The temptation to store everything into one giant document may make the calls faster on the server but will make calls take more time to transfer the call to the front end due to the nature of the internet.  
 
 ## Notes 
 Ideal data calls will follow 
@@ -29,5 +32,10 @@ Subcategories could be referenced, as those will not be called as often. The mos
 - Each Country will reference a spiScore for that year.
 - Each Country will reference a category with a score. Categories are [ Basic, Foundations, Opportunity ]
 - Each Category will have a calculated spiScore specific to the Country, Year, and Category
-- Each Category will have a subset of subcategories that each have a score.
+- Each Category will have a subset of subcategories that each have a score.  
+
+### Workload Considerations
+Returning ALL Countries SPI scores
+Returning One Countries FULL score card
+
 
